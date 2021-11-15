@@ -57,8 +57,13 @@ else(WIN32)
 	  NAMES postprocess.h scene.h version.h config.h cimport.h
 	  PATHS 
 	# S E A R C H   E V E R Y T H I N G
+	/usr/local/include/assimp-5.0.1/include
+	/usr/local/include/assimp-5.0.1/include/assimp/
+#	/usr/local/include/assimp-3.3.1/include
+#	/usr/local/include/assimp-3.3.1/include/assimp/
 	/usr/local/include/
 	/usr/local/include/assimp
+#	/usr/local/include/assimp-3.3.1
 	/usr/local/include
 	/usr/include/assimp
 	/usr/include
@@ -69,16 +74,19 @@ else(WIN32)
 	  NAMES assimp
 	  PATHS 
 	# S E A R C H   E V E R Y T H I N G	
+#    	/usr/local/include/assimp-3.3.1/lib
+    	/usr/local/include/assimp-5.0.1/lib
 	/usr/local/lib/
 	/usr/local/lib
 	/usr/lib
     	/usr/lib64
+ #   	/usr/local/include/assimp-3.3.1/
+    	/usr/local/include/assimp-5.0.1/
 	/sw/lib
 	/opt/local/lib
 	/opt/csw/lib
 	/opt/lib
 	)
-
 	if (assimp_INCLUDE_DIRS AND assimp_LIBRARIES)
 	  SET(assimp_FOUND TRUE)
 	ENDIF (assimp_INCLUDE_DIRS AND assimp_LIBRARIES)
